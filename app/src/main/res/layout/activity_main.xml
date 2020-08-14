@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Listado de Ciclovías"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btncondes"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@android:color/white"
+        android:onClick="Las_Condes"
+        android:text="Las Condes"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btntodos"
+        app:layout_constraintStart_toStartOf="@+id/titulo"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <Button
+        android:textColor="@android:color/white"
+        android:onClick="Sin_Filtrar"
+        android:textSize="20sp"
+        android:background="@android:color/holo_red_dark"
+        android:id="@+id/btntodos"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="Todas"
+        app:layout_constraintEnd_toEndOf="@+id/titulo"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btncondes" />
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recycler_lista"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
